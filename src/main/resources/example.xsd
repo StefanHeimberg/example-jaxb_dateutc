@@ -10,7 +10,8 @@
     <xs:element name="Example">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="Date" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="DateLocal" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="DateLocalBerlin" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
                 <xs:element name="DateUTC" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
         </xs:complexType>
