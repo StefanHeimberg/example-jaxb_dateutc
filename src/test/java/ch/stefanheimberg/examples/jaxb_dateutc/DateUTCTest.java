@@ -32,8 +32,8 @@ public class DateUTCTest {
     
     @BeforeClass
     public static void beforeClass() {
-        System.setProperty("user.timezone", "Europe/Zurich");
-        TimeZone.setDefault(TimeZone.getTimeZone("Europe/Zurich"));
+        System.setProperty("user.timezone", "Europe/London");
+        TimeZone.setDefault(TimeZone.getTimeZone("Europe/London"));
     }
     
     @Test
@@ -43,9 +43,9 @@ public class DateUTCTest {
         
         assertNotNull(example);
         
-        assertEquals("2015-05-19 13:37:40 Europe/Zurich", formatDateTimeZone(example.getDateLocal()));
-        assertEquals("2015-05-19 13:37:40 GMT+02:00", formatDateTimeZone(example.getDateLocalBerlin()));
-        assertEquals("2015-05-19 11:37:40 GMT+00:00", formatDateTimeZone(example.getDateUTC()));
+        assertEquals("2015-05-19 13:37:40 +0100", formatDateTimeZone(example.getDateLocal()));
+        assertEquals("2015-05-19 13:37:40 +0200", formatDateTimeZone(example.getDateLocalBerlin()));
+        assertEquals("2015-05-19 11:37:40 +0000", formatDateTimeZone(example.getDateUTC()));
     }
     
     private String formatDateTimeZone(final XMLGregorianCalendar calendar) {
@@ -54,10 +54,9 @@ public class DateUTCTest {
         final Date dateTime = gc.getTime();
         final TimeZone timeZone = gc.getTimeZone();
         
-        final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss Z");
         sdf.setTimeZone(timeZone);
-        
-        return sdf.format(dateTime) + " " + timeZone.getID();
+        return sdf.format(dateTime);
     }
 
 }
