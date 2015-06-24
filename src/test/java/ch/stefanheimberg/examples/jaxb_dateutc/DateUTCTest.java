@@ -32,7 +32,7 @@ public class DateUTCTest {
         final Example example = JaxbHelper.unmarshall(xmlBytes, Example.class, EXAMPLE_XSD);
         
         assertNotNull(example);
-        assertEquals("2015-05-19 11:37:40", toString(example.getDate()));
+        assertEquals("2015-05-19 13:37:40", toString(example.getDate()));
         assertEquals("2015-05-19 13:37:40", toString(example.getDateUTC()));
     }
     

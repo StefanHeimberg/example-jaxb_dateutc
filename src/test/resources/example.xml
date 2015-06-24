@@ -2,8 +2,9 @@
 <Example xmlns="http://stefanheimberg.ch/ns/jaxb_dateutc">
     
     <!-- Current local time in Bretten, Baden-Württemberg, Germany (CEST) -->
-    <Date>2015-05-19T11:37:40</Date>
+    <Date>2015-05-19T13:37:40</Date>
     
-    <!-- UTC/GMT +2 hours -->
+    <!-- UTC/GMT -2 hours -->
     <DateUTC>2015-05-19T11:37:40Z</DateUTC>
+    
 </Example>
